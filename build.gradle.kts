@@ -16,6 +16,20 @@ java {
     withSourcesJar()
 }
 
+dokka {
+    moduleName.set("Minestom Inventories")
+    dokkaSourceSets.main {
+        sourceLink {
+            localDirectory.set(file("src/main/kotlin"))
+            remoteUrl("https://github.com/expxx/MinestomInvs")
+            remoteLineSuffix.set("#L")
+        }
+        pluginsConfiguration.html {
+            footerMessage.set("(c) 2025 The Cavern")
+        }
+    }
+}
+
 group = "dev.expx"
 version = "1.0.4-SNAPSHOT"
 
