@@ -38,9 +38,7 @@ class Icon : GuiIcon {
      */
     constructor(item: ItemStack) {
         this.item = item
-        this.clickAction = Consumer { s ->
-            s.player.sendMessage("I'm a ${s.clickedItem.material()}!")
-        } // Default no-op click action
+        this.clickAction = Consumer { _ -> } // Default no-op click action
     }
 
     /**
@@ -50,9 +48,7 @@ class Icon : GuiIcon {
      */
     constructor(material: Material) {
         this.item = ItemStack.of(material)
-        this.clickAction = Consumer { s ->
-            s.player.sendMessage("I'm a ${s.clickedItem.material()}!")
-        } // Default no-op click action
+        this.clickAction = Consumer { _ -> } // Default no-op click action
     }
 
     // ------------------------- Icon Customization -------------------------
