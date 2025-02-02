@@ -33,6 +33,17 @@ dokka {
 group = "dev.expx"
 version = "1.0.4-SNAPSHOT"
 
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
+            artifactId = "MinestomInvs"
+            groupId = "dev.expx"
+            version = "1.0.4-SNAPSHOT"
+        }
+    }
+}
+
 detekt {
     buildUponDefaultConfig = true
     allRules = false
