@@ -15,7 +15,7 @@ Minestom Inventories is a quick and simple inventory management utility for deve
 
 
 ## Javadocs
-https://repo.expx.dev/javadoc/releases/dev/expx/minestom/Payments/{version}
+https://expxx.github.io/MinestomInvs/
 
 ## Installation
 
