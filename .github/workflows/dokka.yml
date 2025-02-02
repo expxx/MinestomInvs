@@ -19,7 +19,7 @@ jobs:
           distribution: 'temurin'
 
       - run: chmod +x gradlew
-      - run: ./gradlew dokka
+      - run: ./gradlew dokkaGeneratePublicationHtml
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
