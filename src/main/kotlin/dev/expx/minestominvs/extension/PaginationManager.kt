@@ -19,16 +19,11 @@ import net.minestom.server.item.Material
 import java.util.LinkedList
 
 @Suppress("TooManyFunctions")
-class PaginationManager {
+class PaginationManager(private val gui: Gui) {
 
-    private val gui: Gui
     private val slots: LinkedList<Int> = LinkedList()
     private val items: LinkedList<Icon> = LinkedList()
-    private var page: Int = 1
-
-    constructor(gui: Gui) {
-        this.gui = gui
-    }
+    private var page: Int = 0
 
     fun getSlots(): LinkedList<Int> {
         return slots
@@ -112,11 +107,7 @@ class PaginationManager {
 
         for (i in 0 until this.slots.size) {
             val itemNumber = i + (this.page * this.slots.size)
-            if (this.items.size > itemNumber) {
-                this.gui.addItem(this.slots[i], this.items[itemNumber])
-            } else {
-                this.gui.addItem(this.slots[i], Icon(Material.AIR))
-            }
+            this.gui.addItem(this.slots[i], this.items[itemNumber])
         }
     }
 }
