@@ -26,7 +26,7 @@ import java.util.*
  * GUI representation for creating custom inventories.
  */
 @Suppress("TooManyFunctions", "MagicNumber")
-class Gui {
+open class Gui {
 
     private val numberOfSlotsInARow = 9
     private var icons = HashMap<Int, GuiIcon>()
