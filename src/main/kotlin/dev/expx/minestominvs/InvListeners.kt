@@ -63,8 +63,10 @@ class InvListeners {
         val icon: GuiIcon = gui.getItems()[index] ?: return
 
         // Check if the player has the required permission to click the item.
-        if (icon.permission != null && !permissionHandler(event.player, icon.permission!!)) {
+        val permission: String? = icon.permission
+        if (permission != null && !permissionHandler(event.player, permission)) {
             event.isCancelled = true // Cancel the click if the player doesn't have permission.
+            icon.noPermAction.accept(event) // Trigger the no permission action.
             return
         }
 

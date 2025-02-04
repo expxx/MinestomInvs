@@ -13,6 +13,7 @@
  */
 package dev.expx.minestominvs
 
+import dev.expx.minestominvs.util.mm
 import net.kyori.adventure.text.Component
 import net.minestom.server.event.inventory.InventoryPreClickEvent
 import net.minestom.server.item.ItemComponent
@@ -28,6 +29,7 @@ class Icon : GuiIcon {
 
     override var item: ItemStack
     override var clickAction: Consumer<InventoryPreClickEvent>
+    override var noPermAction: Consumer<InventoryPreClickEvent>
     override var isStealable: Boolean = false
     override var permission: String? = null
 
@@ -39,6 +41,9 @@ class Icon : GuiIcon {
     constructor(item: ItemStack) {
         this.item = item
         this.clickAction = Consumer { _ -> } // Default no-op click action
+        this.noPermAction = Consumer { s ->
+            s.player.sendMessage("<red>You do not have permission.".mm())
+        } // Default no-op no permission action
     }
 
     /**
@@ -49,6 +54,9 @@ class Icon : GuiIcon {
     constructor(material: Material) {
         this.item = ItemStack.of(material)
         this.clickAction = Consumer { _ -> } // Default no-op click action
+        this.noPermAction = Consumer { s ->
+            s.player.sendMessage("<red>You do not have permission.".mm())
+        } // Default no-op no permission action
     }
 
     // ------------------------- Icon Customization -------------------------
@@ -153,6 +161,26 @@ class Icon : GuiIcon {
         return this
     }
 
+    /**
+     * Gets the action to perform when the player does not have permission to click the icon.
+     *
+     * @return The no permission event consumer.
+     */
+    fun getNoPermissionEvent(): Consumer<InventoryPreClickEvent> {
+        return this.noPermAction
+    }
+
+    /**
+     * Set the action to perform when the player does not have permission to click the icon.
+     *
+     * @param event The action to perform when the player does not have permission.
+     * @return The current Icon instance for chaining.
+     */
+    fun onNoPermission(event: Consumer<InventoryPreClickEvent>): Icon {
+        this.noPermAction = event
+        return this
+    }
+
     // ------------------------- Icon Retrieval -------------------------
 
     /**
@@ -168,8 +196,10 @@ class Icon : GuiIcon {
      * Allows for advanced item manipulation by setting a custom ItemStack.
      *
      * @param item The new ItemStack to represent the icon.
+     * @return The current Icon instance for chaining.
      */
-    fun setIcon(item: ItemStack) {
+    fun setIcon(item: ItemStack): Icon {
         this.item = item
+        return this
     }
 }

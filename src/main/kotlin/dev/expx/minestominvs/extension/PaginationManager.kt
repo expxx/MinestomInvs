@@ -82,7 +82,7 @@ class PaginationManager(private val gui: Gui) {
     }
 
     fun isFirstPage(): Boolean {
-        return this.page == 1
+        return this.page == 0
     }
 
     fun getLastPage(): Int {

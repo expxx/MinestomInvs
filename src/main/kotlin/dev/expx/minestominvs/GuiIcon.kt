@@ -27,6 +27,11 @@ interface GuiIcon {
     val clickAction: Consumer<InventoryPreClickEvent>
 
     /**
+     * The action to be performed when the player does not have permission to click the icon.
+     */
+    val noPermAction: Consumer<InventoryPreClickEvent>
+
+    /**
      * The item associated with the icon.
      */
     val item: ItemStack
