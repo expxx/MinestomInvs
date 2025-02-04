@@ -44,6 +44,7 @@ $dokka.location:dev.expx.minestominvs/Gui/onClose/#net.minestom.server.event.inv
 $dokka.location:dev.expx.minestominvs/Gui/onOpen/#net.minestom.server.event.inventory.InventoryOpenEvent/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-gui/on-open.html
 $dokka.location:dev.expx.minestominvs/Gui/open/#kotlin.collections.Iterable[net.minestom.server.entity.Player]/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-gui/open.html
 $dokka.location:dev.expx.minestominvs/Gui/open/#net.minestom.server.entity.Player/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-gui/open.html
+$dokka.location:dev.expx.minestominvs/Gui/removeItem/#kotlin.Int/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-gui/remove-item.html
 $dokka.location:dev.expx.minestominvs/Gui/setClosed/#kotlin.Boolean/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-gui/set-closed.html
 $dokka.location:dev.expx.minestominvs/GuiIcon///PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-gui-icon/index.html
 $dokka.location:dev.expx.minestominvs/GuiIcon/clickAction/#/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-gui-icon/click-action.html
