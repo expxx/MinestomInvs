@@ -50,6 +50,7 @@ $dokka.location:dev.expx.minestominvs/GuiIcon///PointingToDeclaration/-minestom
 $dokka.location:dev.expx.minestominvs/GuiIcon/clickAction/#/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-gui-icon/click-action.html
 $dokka.location:dev.expx.minestominvs/GuiIcon/isStealable/#/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-gui-icon/is-stealable.html
 $dokka.location:dev.expx.minestominvs/GuiIcon/item/#/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-gui-icon/item.html
+$dokka.location:dev.expx.minestominvs/GuiIcon/noPermAction/#/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-gui-icon/no-perm-action.html
 $dokka.location:dev.expx.minestominvs/GuiIcon/permission/#/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-gui-icon/permission.html
 $dokka.location:dev.expx.minestominvs/Icon///PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-icon/index.html
 $dokka.location:dev.expx.minestominvs/Icon/Icon/#net.minestom.server.item.ItemStack/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-icon/-icon.html
@@ -58,9 +59,12 @@ $dokka.location:dev.expx.minestominvs/Icon/appendLore/#kotlin.collections.List[n
 $dokka.location:dev.expx.minestominvs/Icon/clickAction/#/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-icon/click-action.html
 $dokka.location:dev.expx.minestominvs/Icon/getClickEvent/#/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-icon/get-click-event.html
 $dokka.location:dev.expx.minestominvs/Icon/getIcon/#/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-icon/get-icon.html
+$dokka.location:dev.expx.minestominvs/Icon/getNoPermissionEvent/#/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-icon/get-no-permission-event.html
 $dokka.location:dev.expx.minestominvs/Icon/isStealable/#/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-icon/is-stealable.html
 $dokka.location:dev.expx.minestominvs/Icon/item/#/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-icon/item.html
+$dokka.location:dev.expx.minestominvs/Icon/noPermAction/#/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-icon/no-perm-action.html
 $dokka.location:dev.expx.minestominvs/Icon/onClick/#java.util.function.Consumer[net.minestom.server.event.inventory.InventoryPreClickEvent]/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-icon/on-click.html
+$dokka.location:dev.expx.minestominvs/Icon/onNoPermission/#java.util.function.Consumer[net.minestom.server.event.inventory.InventoryPreClickEvent]/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-icon/on-no-permission.html
 $dokka.location:dev.expx.minestominvs/Icon/permission/#/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-icon/permission.html
 $dokka.location:dev.expx.minestominvs/Icon/setAmount/#kotlin.Int/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-icon/set-amount.html
 $dokka.location:dev.expx.minestominvs/Icon/setDurability/#kotlin.Int/PointingToDeclaration/-minestom -inventories/dev.expx.minestominvs/-icon/set-durability.html
