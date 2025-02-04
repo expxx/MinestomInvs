@@ -31,7 +31,7 @@ dokka {
 }
 
 group = "dev.expx"
-version = "1.0.4-SNAPSHOT"
+version = "1.0.5-SNAPSHOT"
 
 publishing {
     publications {
@@ -39,7 +39,7 @@ publishing {
             from(components["java"])
             artifactId = "MinestomInvs"
             groupId = "dev.expx"
-            version = "1.0.4-SNAPSHOT"
+            version = "1.0.5-SNAPSHOT"
         }
     }
 }

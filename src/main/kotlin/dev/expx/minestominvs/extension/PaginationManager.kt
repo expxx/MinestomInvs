@@ -15,7 +15,6 @@ package dev.expx.minestominvs.extension
 
 import dev.expx.minestominvs.Gui
 import dev.expx.minestominvs.Icon
-import net.minestom.server.item.Material
 import java.util.LinkedList
 
 @Suppress("TooManyFunctions")
@@ -104,10 +103,13 @@ class PaginationManager(private val gui: Gui) {
 
     fun update() {
         if (this.page < 0) return
-
-        for (i in 0 until this.slots.size) {
-            val itemNumber = i + (this.page * this.slots.size)
-            this.gui.addItem(this.slots[i], this.items[itemNumber])
+        for (slotNo in 0 until this.slots.size) {
+            val itemNo = slotNo + (this.page * this.slots.size)
+            if (itemNo >= this.items.size) {
+                gui.removeItem(this.slots[slotNo])
+            } else {
+                gui.addItem(this.slots[slotNo], this.items[itemNo])
+            }
         }
     }
 }

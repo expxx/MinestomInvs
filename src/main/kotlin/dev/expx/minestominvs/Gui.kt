@@ -19,6 +19,8 @@ import net.minestom.server.event.inventory.InventoryCloseEvent
 import net.minestom.server.event.inventory.InventoryOpenEvent
 import net.minestom.server.inventory.Inventory
 import net.minestom.server.inventory.InventoryType
+import net.minestom.server.item.ItemStack
+import net.minestom.server.item.Material
 import org.jetbrains.annotations.NotNull
 import java.util.*
 
@@ -140,6 +142,12 @@ open class Gui {
         validateSlot(slot)
         icons[slot] = icon
         inv.setItemStack(slot, icon.item)
+    }
+
+    fun removeItem(slot: Int) {
+        validateSlot(slot)
+        icons.remove(slot)
+        inv.setItemStack(slot, ItemStack.of(Material.AIR))
     }
 
     /**
