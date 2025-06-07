@@ -6,12 +6,7 @@ Minestom Inventories is a quick and simple inventory management utility for deve
 
 ## Badges
 
-![GitHub License](https://img.shields.io/github/license/expxx/Minestom-Payments?style=for-the-badge)
-
-
-![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/expxx/MinestomInvs?style=for-the-badge)
-
-![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/expxx/MinestomInvs?style=for-the-badge)
+![GitHub License](https://img.shields.io/github/license/expxx/MinestomInvs?style=for-the-badge)
 
 
 ## Javadocs
@@ -20,17 +15,10 @@ https://expxx.github.io/MinestomInvs/
 ## Installation
 
 ```xml
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
-
 <dependency>
-    <groupId>com.github.expxx</groupId>
+    <groupId>dev.expx</groupId>
     <artifactId>MinestomInvs</artifactId>
-    <version>ddd447f336</version>
+    <version>1.0.6</version>
 </dependency>
 ```
 
