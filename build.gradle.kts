@@ -4,6 +4,7 @@ import com.vanniktech.maven.publish.SonatypeHost
 import io.gitlab.arturbosch.detekt.Detekt
 import io.gitlab.arturbosch.detekt.DetektCreateBaselineTask
 import java.net.URI
+import java.util.Base64
 
 plugins {
     kotlin("jvm") version "2.1.0"
@@ -56,14 +57,7 @@ mavenPublishing {
 }
 
 signing {
-    val signingInMemoryKeyId: String? by project
-    val signingInMemoryKey: String? by project
-    val signingInMemoryPassword: String? by project
-    if (signingInMemoryKeyId != null && signingInMemoryKey != null && signingInMemoryPassword != null) {
-        useInMemoryPgpKeys(signingInMemoryKeyId, signingInMemoryKey, signingInMemoryPassword)
-    } else {
-        useGpgCmd()
-    }
+    useGpgCmd()
     sign(publishing.publications)
 }
 
