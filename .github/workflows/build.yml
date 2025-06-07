@@ -1,4 +1,4 @@
-name: Deploy Javadoc
+name: Deploy to Central
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  javadoc:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
