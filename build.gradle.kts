@@ -66,8 +66,8 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
-    implementation("net.minestom:minestom-snapshots:87f6524aeb")
-    implementation("net.kyori:adventure-text-minimessage:4.18.0")
+    compileOnly("net.minestom:minestom-snapshots:87f6524aeb")
+    compileOnly("net.kyori:adventure-text-minimessage:4.18.0")
 
 
     // Detekt
