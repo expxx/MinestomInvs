@@ -28,7 +28,7 @@ jobs:
       - name: Publish to Central via Build
         if: github.repository_owner == 'expxx'
         run: |
-          ./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository
+          ./gradlew publishAndReleaseToMavenCentral --no-configuration-cache
           echo "Version: ${VERSION}" >> $GITHUB_STEP_SUMMARY
         env:
           VERSION: ${{ steps.vars.outputs.short_commit_hash }}
