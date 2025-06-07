@@ -4,7 +4,6 @@ import com.vanniktech.maven.publish.SonatypeHost
 import io.gitlab.arturbosch.detekt.Detekt
 import io.gitlab.arturbosch.detekt.DetektCreateBaselineTask
 import java.net.URI
-import java.util.Base64
 
 plugins {
     kotlin("jvm") version "2.1.0"
@@ -12,12 +11,11 @@ plugins {
     id("com.diffplug.spotless") version "7.0.2"
     id("org.jetbrains.dokka") version "2.0.0"
     id("com.vanniktech.maven.publish") version "0.32.0"
-    id("java-library")
     signing
 }
 
 group = "dev.expx"
-version = "1.0.6"
+version = System.getenv("VERSION") ?: "1.0.6"
 
 mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
@@ -57,10 +55,14 @@ mavenPublishing {
 }
 
 signing {
-    useGpgCmd()
-    sign(publishing.publications)
+    val privateKey = System.getenv("ORG_GRADLE_PROJECT_SIGNINGINMEMORYKEY")
+    val keyPassphrase = System.getenv("ORG_GRADLE_PROJECT_SIGNINGINMEMORYKEYPASSWORD")
+    if (privateKey != null && keyPassphrase != null) {
+        useInMemoryPgpKeys(privateKey, keyPassphrase)
+    } else {
+        logger.warn("GPG keys not found in environment variables. Signing will be skipped.")
+    }
 }
-
 java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(21))
