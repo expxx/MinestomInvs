@@ -44,6 +44,7 @@ mavenPublishing {
                 id.set("cammyzed")
                 name.set("Cam M.")
                 url.set("https://expx.dev")
+                email.set("cam@expx.dev")
             }
         }
         scm {
